@@ -1,0 +1,411 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+}
+/*Левая сторона*/
+.main {
+    width: 27%;
+    min-width: 320px;
+    min-height: 100vh;
+    text-align: center;
+    box-shadow: 1px 0 15px rgba(0, 0, 0, 0.4);
+    z-index: 1;
+    align-self: stretch;
+}
+.main__inner {
+    width: 90%;
+    margin: 0 auto;
+}
+/*Форма*/
+.form {
+    margin: 20px 0 0 0;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.form-wrapper {
+    flex: 1 0 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.form__input {
+    width: 70%;
+    margin: 0 15px 0 0;
+    padding: 10px 15px 10px 30px;
+    background-color: whitesmoke;
+    border-radius: 18px;
+    position: relative;
+}
+.input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+}
+.placeholder::placeholder {
+    color: red;
+    font-weight: 700;
+}
+.list-city {
+    position: absolute;
+    top: 110%;
+    left: 15px;
+    width: 80%;
+    min-height: 25px;
+    max-height: 150px;
+    background-color: white;
+    border: 1px solid grey;
+    font-size: 14px;
+    text-align: start;
+    overflow: auto;
+    cursor: pointer;
+}
+.list-city.hidden {
+    display: none;
+}
+.list-city span {
+    display: block;
+    padding: 5px;
+}
+.list-city span:hover {
+    background-color: whitesmoke;
+}
+.btn__form {
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+}
+/*Город*/
+.city__name {
+    margin: 40px 0 40px 0;
+    font-size: 40px;
+}
+.city__name sup {
+    color: grey;
+    font-size: 24px;
+    font-weight: 700;
+}
+.img__description {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+}
+.img__description img {
+    width: 100%;
+    height: 100%;
+}
+.temperature__title {
+    margin: 50px 0 50px 0;
+    font-size: 46px;
+}
+.description__title {
+    font-size: 32px;
+}
+.population {
+    margin: 100px 0 0 0;
+    text-align: start;
+    font-size: 24px;
+    color: grey;
+}
+/*Время дата*/
+.time {
+    margin: 20px 0 0 0;
+    padding: 20px 0 0 0;
+    font-size: 24px;
+    border-top: 1px solid grey;
+}
+.time__hour {
+    margin: 20px 0 20px 0;
+}
+.time__day {
+    margin: 0 0 30px 0;
+}
+
+/*Правая сторона*/
+.forecast {
+    width: 73%;
+    background-color: whitesmoke;
+    align-self: stretch;
+}
+.forecast__inner {
+    width: 92%;
+    margin: 0 auto;
+}
+.forecast__toggle {
+    width: 100%;
+    margin: 30px 0 0 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: start;
+}
+.btn-change {
+    margin: 0 30px 0 0;
+    padding: 5px 10px;
+    font-size: 24px;
+    font-weight: 700;
+    background-color: rgba(138, 43, 226, 0.1);
+    color: goldenrod;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    font-family: 'Montserrat', sans-serif;
+}
+.toggle {
+    background-color: blueviolet;
+    color: gold;
+}
+
+/*Заголовки секций*/
+.title-section {
+    width: 100%;
+    margin: 45px 0 0 0;
+}
+.title-section.prop {
+    width: 100%;
+    margin: 25px 0 0 0;
+}
+.title-section h1 {
+    display: inline;
+    padding: 0 0 5px 0;
+    border-bottom: 3px solid gold;
+    color: blueviolet;
+}
+
+/*Погода день-неделя*/
+.forecast__weater {
+    width: 100%;
+    margin: 30px 0 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.weather__item {
+    margin: 0 10px 30px 10px;
+    padding: 15px 20px;
+    width: 15%;
+    min-width: 150px;
+    background-color: white;
+    color: blueviolet;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+.weater__title {
+    text-align: center;
+    font-size: 12px;
+}
+.weater__img {
+    width: 72px;
+    height: 72px;
+    margin: 25px auto;
+}
+.weater__img img {
+    width: 100%;
+    height: 100%;
+}
+.weater__temperature {
+    margin: 20px 0 0 0;
+    text-align: center;
+    font-size: 12px;
+}
+
+/*Дополнительные параметры*/
+.forecast__propreties {
+    width: 100%;
+    margin: 30px 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.propreties {
+    padding: 0 0 0 0;
+    width: 65%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    align-self: flex-start;
+}
+.propreties__item {
+    width: 26%;
+    min-width: 220px;
+    margin: 0 10px 30px 10px;
+    padding: 15px 10px;
+    background-color: white;
+    color: blueviolet;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+    text-align: center;
+}
+.propreties__title {
+    font-size: 10px;
+}   
+.propreties__img {
+    width: 100%;
+    margin: 25px auto;
+    text-align: center;
+    font-size: 72px;
+    color: gold;
+}
+.propreties__value {
+    text-align: center;
+    font-size: 10px;
+}
+
+/*Карта*/
+.map {
+    width: 35%;
+    height: 416px;
+    align-self: flex-start;
+}
+#basicMap {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/*Адаптивность*/
+@media (max-width: 1640px) {
+    .city__name {
+        font-size: 36px;
+    }
+    .temperature__title {
+        font-size: 36px;
+    }
+    .description__title {
+        font-size: 24px;
+    }
+    .population {
+        font-size: 20px;
+    }
+    .propreties {
+        width: 100%;
+    }
+    .map {
+        display: none;
+    }
+}
+
+/*По высоте*/
+@media (max-height: 850px) {
+    .form {
+        margin: 10px 0 0 0;
+    }
+    .city__name {
+        margin: 20px 0 40px 0;
+        font-size: 36px;
+    }
+    .temperature__title {
+        margin: 20px 0 20px 0;
+    }
+    .population {
+        margin: 140px 0 0 0;
+    }
+    /*Время дата*/
+    .time {
+        margin: 20px 0 15px 0;
+    }
+    .time__hour {
+        margin: 10px 0 20px 0;
+    }
+    .time__day {
+        margin: 0 0 20px 0;
+    }
+    /*Правая сторона*/
+    .forecast__toggle {
+        margin: 20px 0 0 0;
+    }
+    .title-section {
+        margin: 20px 0 0 0;
+    }
+    .forecast__weater {
+        margin: 30px 0 0 0;
+    }
+    .weather__item {
+        margin: 0 10px 10px 10px;
+    }
+    .propreties__item {
+        margin: 0 10px 10px 10px;
+    }
+    .map {
+        height: 428px;
+        padding: 10px 0 0 0;
+    }
+}
+@media (max-width: 850px) {
+    body {
+        flex-wrap: wrap;
+    }
+    .main {
+        width: 100%;
+        min-height: auto;
+    }
+    .main__inner {
+        width: 70%;
+        min-width: 310px;
+        margin: 0 auto;
+    }
+    .form {
+        margin: 10px 0 0 0;
+    }
+    .city__name {
+        margin: 10px 0 20px 0;
+    }
+    .temperature__title {
+        margin: 20px 0 20px 0;
+    }
+    .population {
+        margin: 40px 0 0 0;
+    }
+    /*Время дата*/
+    .time {
+        margin: 20px 0 15px 0;
+    }
+    .time__hour {
+        margin: 10px 0 20px 0;
+    }
+    .time__day {
+        margin: 0 0 20px 0;
+    }
+    /*Правая сторона*/
+    .forecast {
+        width: 100%;
+    }
+    .forecast__toggle {
+        margin: 20px 0 0 0;
+        justify-content: center;
+    }
+}
+@media (max-width: 540px) {
+    .propreties {
+        justify-content: center;
+    }
+}
+@media (max-width: 370px) {
+    .forecast__weater {
+        justify-content: center;
+    }
+}
